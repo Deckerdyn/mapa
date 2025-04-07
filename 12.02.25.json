@@ -1,0 +1,702 @@
+[
+  {
+    "messageId": "27756495821",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS LAGOS",
+      "street": "RUTA 5",
+      "latitude": -41.50891,
+      "longitude": -73.06106
+    }
+  },
+  {
+    "messageId": "27756516917",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS LAGOS",
+      "street": "RUTA 5",
+      "latitude": -41.50891,
+      "longitude": -73.06106
+    }
+  },
+  {
+    "messageId": "27756543805",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS LAGOS",
+      "street": "RUTA 5",
+      "latitude": -41.50891,
+      "longitude": -73.06106
+    }
+  },
+  {
+    "messageId": "27756583179",
+    "positionStatus": {
+      "city": "PUERTO MONTT",
+      "state": "LOS LAGOS",
+      "street": "2 C. LAS HILANDERAS",
+      "latitude": -41.44968,
+      "longitude": -72.96621
+    }
+  },
+  {
+    "messageId": "27757398873",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS LAGOS",
+      "street": "RUTA 5",
+      "latitude": -40.7808,
+      "longitude": -73.16051
+    }
+  },
+  {
+    "messageId": "27757510148",
+    "positionStatus": {
+      "city": "CASA DE LATA",
+      "state": "LOS LAGOS",
+      "street": "RUTA 5",
+      "latitude": -40.66805,
+      "longitude": -73.12325
+    }
+  },
+  {
+    "messageId": "27758001563",
+    "positionStatus": {
+      "city": "RIO BUENO",
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -40.34143,
+      "longitude": -72.99526
+    }
+  },
+  {
+    "messageId": "27758023328",
+    "positionStatus": {
+      "city": "RIO BUENO",
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -40.34143,
+      "longitude": -72.99526
+    }
+  },
+  {
+    "messageId": "27758433503",
+    "positionStatus": {
+      "city": "LIPINGUE",
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.93518,
+      "longitude": -72.79768
+    }
+  },
+  {
+    "messageId": "27758449131",
+    "positionStatus": {
+      "city": "LIPINGUE",
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.93518,
+      "longitude": -72.79768
+    }
+  },
+  {
+    "messageId": "27758557553",
+    "positionStatus": {
+      "city": "LOS GUAPES",
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.81786,
+      "longitude": -72.84611
+    }
+  },
+  {
+    "messageId": "27758596897",
+    "positionStatus": {
+      "city": "LOS GUAPES",
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.81786,
+      "longitude": -72.84611
+    }
+  },
+  {
+    "messageId": "27758667426",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.73303,
+      "longitude": -72.90883
+    }
+  },
+  {
+    "messageId": "27758846418",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.55755,
+      "longitude": -72.92241
+    }
+  },
+  {
+    "messageId": "27758941078",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.51181,
+      "longitude": -72.81381
+    }
+  },
+  {
+    "messageId": "27758988438",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS RÍOS",
+      "street": "RUTA 5",
+      "latitude": -39.51181,
+      "longitude": -72.81381
+    }
+  },
+  {
+    "messageId": "27759212049",
+    "positionStatus": {
+      "city": "MCALLEN",
+      "state": "TX",
+      "street": "5700 S INTERNATIONAL PKWY",
+      "latitude": 26.1586,
+      "longitude": -98.2824
+    }
+  },
+  {
+    "messageId": "27760354681",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "RUTA 5",
+      "latitude": -38.47353,
+      "longitude": -72.42703
+    }
+  },
+  {
+    "messageId": "27760370437",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "RUTA 5",
+      "latitude": -38.47353,
+      "longitude": -72.42703
+    }
+  },
+  {
+    "messageId": "27760455287",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "S-109",
+      "latitude": -38.37351,
+      "longitude": -72.38748
+    }
+  },
+  {
+    "messageId": "27760488937",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "S-109",
+      "latitude": -38.37351,
+      "longitude": -72.38748
+    }
+  },
+  {
+    "messageId": "27760941143",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "RUTA 5",
+      "latitude": -37.99923,
+      "longitude": -72.4258
+    }
+  },
+  {
+    "messageId": "27761002957",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "RUTA 5",
+      "latitude": -37.99923,
+      "longitude": -72.4258
+    }
+  },
+  {
+    "messageId": "27761053302",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "RUTA 5",
+      "latitude": -37.8993,
+      "longitude": -72.38983
+    }
+  },
+  {
+    "messageId": "27761120990",
+    "positionStatus": {
+      "city": null,
+      "state": "ARAUCANÍA",
+      "street": "RUTA 5",
+      "latitude": -37.8993,
+      "longitude": -72.38983
+    }
+  },
+  {
+    "messageId": "27761280005",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "RUTA 5",
+      "latitude": -37.7587,
+      "longitude": -72.27561
+    }
+  },
+  {
+    "messageId": "27761345560",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "RUTA 5",
+      "latitude": -37.7587,
+      "longitude": -72.27561
+    }
+  },
+  {
+    "messageId": "27761604895",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "RUTA 5",
+      "latitude": -37.46826,
+      "longitude": -72.40733
+    }
+  },
+  {
+    "messageId": "27761625339",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "RUTA 5",
+      "latitude": -37.46826,
+      "longitude": -72.40733
+    }
+  },
+  {
+    "messageId": "27761726722",
+    "positionStatus": {
+      "city": "AGUAS Y ARENAS",
+      "state": "BÍO BÍO",
+      "street": "RUTA 5",
+      "latitude": -37.36866,
+      "longitude": -72.36701
+    }
+  },
+  {
+    "messageId": "27762237553",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "812 LONGITUDINAL SUR, SECTOR: PERQUILAUQUÉN - RÍO RENAICO",
+      "latitude": -37.1337,
+      "longitude": -72.3867
+    }
+  },
+  {
+    "messageId": "27762260656",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "812 LONGITUDINAL SUR, SECTOR: PERQUILAUQUÉN - RÍO RENAICO",
+      "latitude": -37.1337,
+      "longitude": -72.3867
+    }
+  },
+  {
+    "messageId": "27762365295",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "RUTA 5",
+      "latitude": -37.01001,
+      "longitude": -72.36388
+    }
+  },
+  {
+    "messageId": "27762398076",
+    "positionStatus": {
+      "city": null,
+      "state": "BÍO BÍO",
+      "street": "RUTA 5",
+      "latitude": -37.01001,
+      "longitude": -72.36388
+    }
+  },
+  {
+    "messageId": "27762813422",
+    "positionStatus": {
+      "city": null,
+      "state": "ÑUBLE",
+      "street": "RUTA 5",
+      "latitude": -36.64178,
+      "longitude": -72.21113
+    }
+  },
+  {
+    "messageId": "27763856745",
+    "positionStatus": {
+      "city": null,
+      "state": "MAULE",
+      "street": "3425 CARR. PANAMERICANA SUR",
+      "latitude": -36.01091,
+      "longitude": -71.73365
+    }
+  },
+  {
+    "messageId": "27763881204",
+    "positionStatus": {
+      "city": null,
+      "state": "MAULE",
+      "street": "3425 CARR. PANAMERICANA SUR",
+      "latitude": -36.01091,
+      "longitude": -71.73365
+    }
+  },
+  {
+    "messageId": "27764374533",
+    "positionStatus": {
+      "city": null,
+      "state": "MAULE",
+      "street": "RUTA 5",
+      "latitude": -35.55136,
+      "longitude": -71.6963
+    }
+  },
+  {
+    "messageId": "27764397594",
+    "positionStatus": {
+      "city": null,
+      "state": "MAULE",
+      "street": "RUTA 5",
+      "latitude": -35.55136,
+      "longitude": -71.6963
+    }
+  },
+  {
+    "messageId": "27764484373",
+    "positionStatus": {
+      "city": null,
+      "state": "MAULE",
+      "street": "256 LONGITUDINAL SUR, SECTOR: PEOR ES NADA - PERQUILAUQUÉN",
+      "latitude": -35.45555,
+      "longitude": -71.64636
+    }
+  },
+  {
+    "messageId": "27764617499",
+    "positionStatus": {
+      "city": "PANGUILEMO",
+      "state": "MAULE",
+      "street": "RUTA 5",
+      "latitude": -35.34365,
+      "longitude": -71.569
+    }
+  },
+  {
+    "messageId": "27764679481",
+    "positionStatus": {
+      "city": "PANGUILEMO",
+      "state": "MAULE",
+      "street": "RUTA 5",
+      "latitude": -35.34365,
+      "longitude": -71.569
+    }
+  },
+  {
+    "messageId": "27764711512",
+    "positionStatus": {
+      "city": null,
+      "state": "MAULE",
+      "street": "RUTA 5",
+      "latitude": -35.26718,
+      "longitude": -71.49145
+    }
+  },
+  {
+    "messageId": "27764710846",
+    "positionStatus": {
+      "city": "MCALLEN",
+      "state": "TX",
+      "street": "5700 S INTERNATIONAL PKWY",
+      "latitude": 26.1586,
+      "longitude": -98.2824
+    }
+  },
+  {
+    "messageId": "27766658892",
+    "positionStatus": {
+      "city": null,
+      "state": "O'HIGGINS",
+      "street": "RUTA 5",
+      "latitude": -34.11458,
+      "longitude": -70.78035
+    }
+  },
+  {
+    "messageId": "27766677778",
+    "positionStatus": {
+      "city": null,
+      "state": "O'HIGGINS",
+      "street": "RUTA 5",
+      "latitude": -34.11458,
+      "longitude": -70.78035
+    }
+  },
+  {
+    "messageId": "27770630575",
+    "positionStatus": {
+      "city": "MCALLEN",
+      "state": "TX",
+      "street": "5700 S INTERNATIONAL PKWY",
+      "latitude": 26.1586,
+      "longitude": -98.2822
+    }
+  },
+  {
+    "messageId": "27772477044",
+    "positionStatus": {
+      "city": "SANTIAGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "548 C. AMERICO VESPUCIO",
+      "latitude": -33.45108,
+      "longitude": -70.77346
+    }
+  },
+  {
+    "messageId": "27772710326",
+    "positionStatus": {
+      "city": "SAN BERNARDO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "1396 AMAZONAS",
+      "latitude": -33.58478,
+      "longitude": -70.7143
+    }
+  },
+  {
+    "messageId": "27772808576",
+    "positionStatus": {
+      "city": "SAN BERNARDO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "6 SAN JOSÉ DE NOS",
+      "latitude": -33.63255,
+      "longitude": -70.71426
+    }
+  },
+  {
+    "messageId": "27773664771",
+    "positionStatus": {
+      "city": "SAN BERNARDO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "6 SAN JOSÉ DE NOS",
+      "latitude": -33.6334,
+      "longitude": -70.71351
+    }
+  },
+  {
+    "messageId": "27773903432",
+    "positionStatus": {
+      "city": "CALERA DE TANGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "381 AV. CALERA DE TANGO",
+      "latitude": -33.63013,
+      "longitude": -70.76165
+    }
+  },
+  {
+    "messageId": "27773903433",
+    "positionStatus": {
+      "city": "CALERA DE TANGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "381 AV. CALERA DE TANGO",
+      "latitude": -33.63013,
+      "longitude": -70.76165
+    }
+  },
+  {
+    "messageId": "27774042636",
+    "positionStatus": {
+      "city": "CALERA DE TANGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "8980 AV. CALERA DE TANGO",
+      "latitude": -33.62588,
+      "longitude": -70.77398
+    }
+  },
+  {
+    "messageId": "27774117152",
+    "positionStatus": {
+      "city": "CALERA DE TANGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "8980 AV. CALERA DE TANGO",
+      "latitude": -33.62588,
+      "longitude": -70.77398
+    }
+  },
+  {
+    "messageId": "27774181999",
+    "positionStatus": {
+      "city": null,
+      "state": "REGIÓN METROPOLITANA",
+      "street": "1 LOS TILOS",
+      "latitude": -33.61655,
+      "longitude": -70.8117
+    }
+  },
+  {
+    "messageId": "27774421844",
+    "positionStatus": {
+      "city": null,
+      "state": "REGIÓN METROPOLITANA",
+      "street": "384 AV. BERLÍN",
+      "latitude": -33.62646,
+      "longitude": -70.8725
+    }
+  },
+  {
+    "messageId": "27774421845",
+    "positionStatus": {
+      "city": null,
+      "state": "REGIÓN METROPOLITANA",
+      "street": "384 AV. BERLÍN",
+      "latitude": -33.62646,
+      "longitude": -70.8725
+    }
+  },
+  {
+    "messageId": "27776420304",
+    "positionStatus": {
+      "city": "MCALLEN",
+      "state": "TX",
+      "street": "5700 S INTERNATIONAL PKWY",
+      "latitude": 26.1586,
+      "longitude": -98.2823
+    }
+  },
+  {
+    "messageId": "27776714512",
+    "positionStatus": {
+      "city": "PENAFLOR",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "26 AV. VICUÑA MACKENNA",
+      "latitude": -33.6103,
+      "longitude": -70.85765
+    }
+  },
+  {
+    "messageId": "27776929724",
+    "positionStatus": {
+      "city": "CALERA DE TANGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "6 AV. CALERA DE TANGO",
+      "latitude": -33.62625,
+      "longitude": -70.77275
+    }
+  },
+  {
+    "messageId": "27777074251",
+    "positionStatus": {
+      "city": "MAIPO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "22601 AV. PDTE. JORGE ALESSANDRI RODRÍGUEZ",
+      "latitude": -33.63243,
+      "longitude": -70.71403
+    }
+  },
+  {
+    "messageId": "27777941119",
+    "positionStatus": {
+      "city": "SAN BERNARDO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "20189 AV. PDTE. JORGE ALESSANDRI RODRÍGUEZ",
+      "latitude": -33.63721,
+      "longitude": -70.71298
+    }
+  },
+  {
+    "messageId": "27778157657",
+    "positionStatus": {
+      "city": "SANTIAGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "2815 AV. PADRE ALBERTO HURTADO",
+      "latitude": -33.47896,
+      "longitude": -70.68451
+    }
+  },
+  {
+    "messageId": "27778168159",
+    "positionStatus": {
+      "city": "SANTIAGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "2815 AV. PADRE ALBERTO HURTADO",
+      "latitude": -33.47896,
+      "longitude": -70.68451
+    }
+  },
+  {
+    "messageId": "27766677778",
+    "positionStatus": {
+      "city": "CHILOÉ",
+      "state": "LOS LAGOS",
+      "street": "ANCUD",
+      "latitude": -41.8692,
+      "longitude": -73.8181
+    }
+  },
+  {
+    "messageId": "27756495821",
+    "positionStatus": {
+      "city": "QUELLÓN",
+      "state": "LOS LAGOS",
+      "street": "RUTA 5",
+      "latitude": -43.11667,
+      "longitude": -73.61667
+    }
+  },
+  {
+    "messageId": "27756516917",
+    "positionStatus": {
+      "city": "SANTIAGO",
+      "state": "REGIÓN METROPOLITANA",
+      "street": "ALAMEDA",
+      "latitude": -33.44889,
+      "longitude": -70.66927
+    }
+  },
+  {
+    "messageId": "27756543805",
+    "positionStatus": {
+      "city": null,
+      "state": "LOS LAGOS",
+      "street": "RUTA 5",
+      "latitude": -41.50891,
+      "longitude": -73.06106
+    }
+  },
+  {
+    "messageId": "27756583179",
+    "positionStatus": {
+      "city": "PUERTO MONTT",
+      "state": "LOS LAGOS",
+      "street": "2 C. LAS HILANDERAS",
+      "latitude": -41.44968,
+      "longitude": -72.96621
+    }
+  }
+]
