@@ -485,12 +485,12 @@ async def serve_map():
             <h1 id="header-title">Monitor de Rutas Logísticas</h1>
             <div id="header-controls">
                 <button class="header-button" onclick="toggleLiveMode()">⏯️ Simulación</button>
-                <button class="header-button" onclick="loadInfoData()">🔄 Actualizar Datos</button>
+                <!-- <button class="header-button" onclick="loadInfoData()">🔄 Actualizar Datos</button> -->
             </div>
         </header>
         <div id="history">
-            <h2>Controles</h2>
-            <button id="live-toggle" onclick="toggleLiveMode()">Iniciar Simulación en Vivo</button>
+            <!-- <h2>Controles</h2>
+            <button id="live-toggle" onclick="toggleLiveMode()">Iniciar Simulación en Vivo</button> -->
             <h2>Historial</h2>
             <input type="text" id="history-search" placeholder="Buscar">
             <div id="history-list"></div>
