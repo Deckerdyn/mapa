@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Historial de Rutas - Animación del Camión</title>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header id="app-header">
+      <h1 id="header-title">Monitor de Rutas Logísticas</h1>
+      <div id="header-controls">
+        <button class="header-button" onclick="toggleLiveMode()">
+          ⏯️ Simulación
+        </button>
+      </div>
+    </header>
+    <div id="history">
+      <h2>Historial</h2>
+      <input type="text" id="history-search" placeholder="Buscar" />
+      <div id="history-list"></div>
+    </div>
+    <div id="map"></div>
+    <div id="info-panel">
+      <h2>Localizaciones</h2>
+      <input
+        type="text"
+        id="info-search"
+        placeholder="Buscar por ID, calle, ciudad o estado"
+      />
+      <div id="info-content"></div>
+    </div>
+
+    <script>
+      var map = L.map("map").setView([-41.4682, -72.9441], 10);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap contributors",
+        maxZoom: 19,
+      }).addTo(map);
+
+      var truckIcon = L.icon({
+        iconUrl: "/static/camion.png",
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+      });
+      var truckMarker = L.marker([-41.4682, -72.9441], {
+        icon: truckIcon,
+      }).addTo(map);
+
+      var routeLine = L.polyline([], { color: "blue" }).addTo(map);
+      var animationInterval = null;
+      var liveMode = false;
+      var liveInterval = null;
+
+      var puertoMonttCoords = [
+        [-73.2, -41.43],
+        [-72.9, -41.43],
+        [-72.9, -41.55],
+        [-73.2, -41.55],
+        [-73.2, -41.43],
+      ];
+
+      var puertoMonttPolygon = L.polygon(
+        puertoMonttCoords.map((coord) => [coord[1], coord[0]]),
+        { color: "red", fillOpacity: 0.1 }
+      ).addTo(map);
+
+      function isPointInPolygon(lat, lng, polygonCoords) {
+        const point = turf.point([lng, lat]);
+        const polygon = turf.polygon([
+          polygonCoords.map((coord) => [coord[1], coord[0]]),
+        ]);
+        return turf.booleanPointInPolygon(point, polygon);
+      }
+
+      var wasInsidePuertoMontt = true;
+
+      function updateLivePosition() {
+        fetch("/live-route")
+          .then((response) => response.json())
+          .then((data) => {
+            let newLatLng = [data.coords[1], data.coords[0]];
+            truckMarker.setLatLng(newLatLng);
+            map.panTo(newLatLng, { animate: true, duration: 0.5 });
+            var currentLat = newLatLng[0];
+            var currentLng = newLatLng[1];
+            var isInside = isPointInPolygon(
+              currentLat,
+              currentLng,
+              puertoMonttCoords
+            );
+            if (wasInsidePuertoMontt && !isInside) {
+              alert("¡El camión ha salido de Puerto Montt!");
+            }
+            wasInsidePuertoMontt = isInside;
+          });
+      }
+
+      function toggleLiveMode() {
+        liveMode = !liveMode;
+        const btn = document.getElementById("live-toggle");
+        if (liveMode) {
+          liveInterval = setInterval(updateLivePosition, 2000);
+        } else {
+          clearInterval(liveInterval);
+        }
+      }
+
+      var fullHistory = [];
+      var fullPositions = [];
+
+      function displayHistory(historyArray) {
+        var historyDiv = document.getElementById("history-list");
+        historyDiv.innerHTML = "";
+        historyArray.forEach((name) => {
+          var btn = document.createElement("button");
+          btn.innerText = name;
+          btn.onclick = function () {
+            viewRoute(name);
+          };
+          historyDiv.appendChild(btn);
+        });
+      }
+
+      function loadHistory() {
+        fetch("/history")
+          .then((response) => response.json())
+          .then((data) => {
+            fullHistory = data.history;
+            displayHistory(fullHistory);
+          });
+      }
+
+      document
+        .getElementById("history-search")
+        .addEventListener("input", function () {
+          var term = this.value.trim().toLowerCase();
+          if (term === "") {
+            displayHistory(fullHistory);
+          } else {
+            var filtered = fullHistory.filter(function (name) {
+              return name.toLowerCase().includes(term);
+            });
+            displayHistory(filtered);
+          }
+        });
+
+      function viewRoute(routeName) {
+        fetch("/track/" + encodeURIComponent(routeName))
+          .then((response) => response.json())
+          .then((data) => {
+            let coordinates = data.route;
+            if (animationInterval) clearInterval(animationInterval);
+            if (routeLine) map.removeLayer(routeLine);
+            routeLine = L.polyline([], { color: "blue" }).addTo(map);
+            truckMarker.setLatLng([coordinates[0][1], coordinates[0][0]]);
+            let index = 0;
+            animationInterval = setInterval(() => {
+              if (index < coordinates.length) {
+                let newLatLng = [coordinates[index][1], coordinates[index][0]];
+                truckMarker.setLatLng(newLatLng);
+                routeLine.addLatLng(newLatLng);
+                map.panTo(newLatLng, { animate: true, duration: 0.5 });
+                index++;
+              } else {
+                clearInterval(animationInterval);
+              }
+            }, 10);
+          });
+      }
+
+      function displayInfo(positionsArray) {
+        const infoContent = document.getElementById("info-content");
+
+        // Si no hay datos
+        if (!positionsArray || positionsArray.length === 0) {
+          infoContent.innerHTML =
+            "<div class='no-data'>No hay localizaciones disponibles</div>";
+          return;
+        }
+
+        infoContent.innerHTML = positionsArray
+          .map(
+            (item) => `
+        <div class="info-item" onclick="focusOnPosition(
+            ${item.positionStatus?.latitude || 0}, 
+            ${item.positionStatus?.longitude || 0}
+        )">
+            <div class="info-header">
+                <span class="message-id">#${item.messageId}</span>
+                <span class="message-type">${
+                  item.assetStatus?.messageType || "N/A"
+                }</span>
+            </div>
+            
+            <div class="location-info">
+                <div class="address">
+                    ${item.positionStatus?.street || "Dirección no disponible"}
+                </div>
+                <div class="city-state">
+                    ${[item.positionStatus?.city, item.positionStatus?.state]
+                      .filter(Boolean)
+                      .join(", ")}
+                </div>
+                <div class="country">
+                    ${item.positionStatus?.country || "País no disponible"}
+                </div>
+            </div>
+
+            <div class="status-info">
+                <div class="battery">
+                    <span class="label">Batería:</span>
+                    ${item.assetStatus?.batteryStatus || "N/A"} 
+                    (${item.assetStatus?.batteryVoltage || "?"}V)
+                </div>
+                <div class="temperature">
+                    <span class="label">Temperatura:</span>
+                    ${item.reeferStatus?.ambientTemp || "N/A"}°C
+                </div>
+            </div>
+
+            <div class="timestamp">
+                ${
+                  new Date(item.assetStatus?.messageStamp).toLocaleString() ||
+                  "Fecha desconocida"
+                }
+            </div>
+        </div>
+    `
+          )
+          .join("");
+      }
+
+      // Función actualizada para cargar datos
+      // Versión mejorada de loadInfoData()
+      function loadInfoData() {
+        fetch("/api/positions")
+          .then((response) => response.json())
+          .then((data) => {
+            // Asumiendo que la API devuelve { data: [...] }
+            window.fullPositions = data.data || [];
+            displayInfo(fullPositions);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            displayInfo([]); // Mostrar estado vacío
+          });
+      }
+
+      // Función de visualización corregida
+      function displayInfo(positionsArray) {
+        const infoContent = document.getElementById("info-content");
+        infoContent.innerHTML = positionsArray
+          .map(
+            (item) => `
+        <div class="info-item">
+            <div class="header">
+                <strong>${item.assetStatus.messageStamp}</strong>
+                <span class="battery"> Batería (${
+                  item.assetStatus.batteryVoltage
+                }V)</span>
+            </div>
+            
+            <div class="address">
+                ${item.positionStatus.fullAddress}
+            </div>
+
+            <div class="status">
+                <span>Temperatura: ${
+                  item.reeferStatus.ambientTemp || "N/A"
+                }°C</span>
+                <span>Movimiento: ${item.impactStatus.moving || "N/A"}</span>
+            </div>
+        </div>
+    `
+          )
+          .join("");
+      }
+
+      document
+        .getElementById("info-search")
+        .addEventListener("input", function () {
+          var term = this.value.trim().toLowerCase();
+          var filtered = fullPositions.filter((item) => {
+            return (
+              item.messageId.toLowerCase().includes(term) ||
+              (item.positionStatus.street || "").toLowerCase().includes(term) ||
+              (item.positionStatus.city || "").toLowerCase().includes(term) ||
+              (item.positionStatus.state || "").toLowerCase().includes(term) ||
+              (item.positionStatus.country || "")
+                .toLowerCase()
+                .includes(term) ||
+              (item.positionStatus.zipCode || "").toLowerCase().includes(term)
+            );
+          });
+          displayInfo(filtered);
+        });
+
+      function focusOnPosition(lat, lng) {
+        map.setView([lat, lng], 15);
+        truckMarker.setLatLng([lat, lng]);
+      }
+
+      loadHistory();
+      loadInfoData();
+    </script>
+  </body>
+</html>
